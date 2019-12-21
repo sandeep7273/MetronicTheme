@@ -1,0 +1,27 @@
+<div class="row">
+	<div class="col-xl-8 offset-xl-2">
+		<form class="example-form">
+			<mat-form-field class="example-full-width">
+			  <input matInput  name="name"  [(ngModel)]="recordEdit.name" placeholder="User Name" value="name" >
+			</mat-form-field>
+			<mat-form-field class="example-full-width">
+				<input matInput  name="contact" [(ngModel)]="recordEdit.contact"  placeholder="User Contact" value="contact">
+			</mat-form-field>
+			<mat-form-field class="example-full-width">
+				<input matInput  name="email" [(ngModel)]="recordEdit.email" placeholder="User Email" value="email">
+			</mat-form-field>
+			<mat-form-field class="example-full-width">
+			<input matInput  name="position" [(ngModel)]="recordEdit.position"  placeholder="Position" value="position">
+			</mat-form-field>
+			<mat-form-field class="example-full-width">
+				<input matInput  name="address" [(ngModel)]="recordEdit.address" placeholder="Address" value="address">
+			  </mat-form-field>
+			
+		  </form>
+		  <div class="button-row">
+			<button mat-raised-button color="primary"  (click)="updateEmployee()">Update</button>
+		  </div>
+
+	</div>
+	
+</div>

@@ -1,0 +1,42 @@
+
+<div class="example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="dataSource">
+    <!--- Note that these columns can be defined in any order.
+				The actual rendered columns are set as a property on the row definition" -->
+    <!-- Position Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element; let i = index"> {{element.name}} </mat-cell>
+	</ng-container>
+	<!-- Name Column -->
+    <ng-container matColumnDef="contact">
+      <mat-header-cell *matHeaderCellDef> Contact </mat-header-cell>
+      <mat-cell *matCellDef="let element; let i = index"> {{element.contact}} </mat-cell>
+    </ng-container>
+    <!-- Weight Column -->
+    <ng-container matColumnDef="email">
+      <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+      <mat-cell *matCellDef="let element; let i = index"> {{element.email}} </mat-cell>
+    </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef> Position </mat-header-cell>
+      <mat-cell *matCellDef="let element; let i = index"> {{element.position}} </mat-cell>
+    </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="address">
+      <mat-header-cell *matHeaderCellDef> Address </mat-header-cell>
+      <mat-cell *matCellDef="let element; let i = index"> {{element.address}} </mat-cell>
+    </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="action">
+      <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+      <mat-cell *matCellDef="let element;let i = index"> 
+        <button mat-raised-button color="primary"  (click)="editEmployee(i)">Edit</button>
+        <button mat-raised-button color="danger"  (click)="deleteEmployee(i)">Delete</button>  
+      </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
